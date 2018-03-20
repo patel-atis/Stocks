@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320193603) do
+ActiveRecord::Schema.define(version: 20180320202330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ledgers", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "stock_id"
+    t.boolean "holding?"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.integer "stock_id"
@@ -21,6 +29,16 @@ ActiveRecord::Schema.define(version: 20180320193603) do
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "relationships", force: :cascade do |t|
+    t.integer "follower"
+    t.integer "followed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["followed"], name: "index_relationships_on_followed"
+    t.index ["follower", "followed"], name: "index_relationships_on_follower_and_followed", unique: true
+    t.index ["follower"], name: "index_relationships_on_follower"
   end
 
   create_table "stocks", force: :cascade do |t|
