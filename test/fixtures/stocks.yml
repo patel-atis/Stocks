@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: MyString
+  ticker: MyString
+  price: 9.99
+  dividend: 9.99
+  type: false
+  class: MyString
+
+two:
+  company: MyString
+  ticker: MyString
+  price: 9.99
+  dividend: 9.99
+  type: false
+  class: MyString

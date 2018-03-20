@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @stock.company %>
+</p>
+
+<p>
+  <strong>Ticker:</strong>
+  <%= @stock.ticker %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @stock.price %>
+</p>
+
+<p>
+  <strong>Dividend:</strong>
+  <%= @stock.dividend %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @stock.type %>
+</p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @stock.class %>
+</p>
+
+<%= link_to 'Edit', edit_stock_path(@stock) %> |
+<%= link_to 'Back', stocks_path %>
