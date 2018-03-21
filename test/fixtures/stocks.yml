@@ -7,6 +7,8 @@ one:
   dividend: 9.99
   type: false
   class: MyString
+  type: true
+  rating: MyString
 
 two:
   company: MyString
@@ -15,3 +17,4 @@ two:
   dividend: 9.99
   type: false
   class: MyString
+  rating: MyString
