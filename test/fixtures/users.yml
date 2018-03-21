@@ -1,10 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  email: MyString
-  pass_hash: MyString
-  rem_hash: MyString
+  name: "atish patel"
+  email: "atish.patel95@yahoo.com"
+  pass_hash: "password"
+  rem_hash: "password"
 
 two:
   name: MyString

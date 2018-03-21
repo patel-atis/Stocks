@@ -5,8 +5,6 @@ one:
   ticker: MyString
   price: 9.99
   dividend: 9.99
-  type: false
-  class: MyString
   type: true
   rating: MyString
 
@@ -16,5 +14,4 @@ two:
   price: 9.99
   dividend: 9.99
   type: false
-  class: MyString
   rating: MyString
