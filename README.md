@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a stock trading social media application. Users can follow one another and have a portfolio of stocks.
 
-Things you may want to cover:
+I have 3 main resources so far: Users, Posts, and Stocks. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Stocks is currently seeded with the 100 most active stocks (name and ticker) according to WSJ.
