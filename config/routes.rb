@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  root 'posts#index'
+  root 'static_pages#home'
+
+  get 'static_pages/login'
+  get 'static_pages/home'
+  get 'static_pages/alternatives'
+  get 'static_pages/issues'
+
   resources :stocks
   resources :posts
   resources :users
