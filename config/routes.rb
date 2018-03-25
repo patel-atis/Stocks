@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'static_pages/home'
   get 'static_pages/alternatives'
   get 'static_pages/issues'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
 
   resources :stocks
   resources :posts
