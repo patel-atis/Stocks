@@ -21,9 +21,10 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
-#add react for js
-gem 'webpacker'
-gem 'react-rails'
+# Hopefully add javascript with react on rails
+gem 'react_on_rails', '10.1.3'
+# Maybe webpacker will make react work
+gem 'webpacker', '3.4.1'
 #quick style with semantic-ui
 gem 'semantic-ui-sass'
 #i need jquery also
