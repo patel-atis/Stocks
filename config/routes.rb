@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
-  get 'static_pages/login'
-  get 'static_pages/home'
-  get 'static_pages/alternatives'
-  get 'static_pages/issues'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
+  get '/home', to: 'static_pages#home'
+  get '/alternatives', to: 'static_pages#alternatives'
+  get '/issues', to: 'static_pages#issues'
 
   resources :stocks
   resources :posts
