@@ -3,7 +3,9 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.3.1",
+    "alphavantage": "^1.1.1",
     "babel-preset-react": "^6.24.1",
+    "npm": "^5.8.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
