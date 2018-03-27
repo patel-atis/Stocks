@@ -20,7 +20,7 @@
       <tr>
         <td><%= stock.company %></td>
         <td><%= stock.ticker %></td>
-        <td><%= stock.price %></td>
+        <td><%= react_component("Price", prerender: true) %></td>
         <td><%= stock.dividend %></td>
         <td><%=if stock.type; "Preffered"; else; "Common"; end%></td>
         <td><%= stock.rating %></td>

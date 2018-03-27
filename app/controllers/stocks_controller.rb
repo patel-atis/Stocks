@@ -4,6 +4,7 @@ class StocksController < ApplicationController
   # GET /stocks
   # GET /stocks.json
   def index
+    @stock_props = "0.00"
     @stocks = Stock.all
   end
 
