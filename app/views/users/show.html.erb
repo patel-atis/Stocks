@@ -12,12 +12,12 @@
 
 <p>
   <strong>Pass hash:</strong>
-  <%= @user.pass_hash %>
+  <%= @user.password %>
 </p>
 
 <p>
   <strong>Rem hash:</strong>
-  <%= @user.rem_hash %>
+  <%= @user.password_confirmation %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
