@@ -15,3 +15,12 @@
  */
 
 @import 'semantic-ui';
+
+$bg-color1: #e9ebee;
+
+body {
+  background-color: $bg-color1;
+  #page {
+    margin-top: 40px;
+  }
+}
