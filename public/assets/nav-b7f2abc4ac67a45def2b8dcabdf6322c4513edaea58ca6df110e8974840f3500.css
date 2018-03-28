@@ -1,0 +1,17 @@
+/* line 1, /Users/admin/Desktop/sites/stocks/app/assets/stylesheets/nav.css.scss */
+#navbar {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  list-style: none;
+}
+/* line 7, /Users/admin/Desktop/sites/stocks/app/assets/stylesheets/nav.css.scss */
+#navbar #logo {
+  float: left;
+}
+/* line 10, /Users/admin/Desktop/sites/stocks/app/assets/stylesheets/nav.css.scss */
+#navbar #nav-list {
+  float: right;
+  display: inline-block;
+}

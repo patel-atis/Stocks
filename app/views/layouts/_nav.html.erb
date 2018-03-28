@@ -1,5 +1,22 @@
-<nav style='width:100%; background-color:blue;'>
-
-  <%= link_to 'Home', root_path %>
-
-</nav>
+<header id="navbar">
+  <div class="container">
+    <%= link_to "Stocks!", root_path, id: "logo" %>
+    <nav>
+      <ul id="nav-list">
+        <% if logged_in? %>
+          <li><%= link_to "Home", posts_path %></li>
+          <li><%= link_to "Assets", stocks_path %></li>
+          <li class="dropdown">
+            <li><%= link_to "Profile", current_user %></li>
+            <li>
+              <%= link_to "Log out", logout_path, method: :delete %>
+            </li>
+          </li>
+        <% else %>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Log in", login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
