@@ -25,8 +25,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'react_on_rails', '10.1.3'
 # Maybe webpacker will make react work
 gem 'webpacker', '3.4.1'
-#quick style with semantic-ui
-gem 'semantic-ui-sass'
 #i need jquery also
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
