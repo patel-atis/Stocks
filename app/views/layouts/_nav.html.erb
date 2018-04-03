@@ -1,22 +1,20 @@
-<header id="navbar">
-  <div class="container">
-    <%= link_to "Stocks!", root_path, id: "logo" %>
-    <nav>
-      <ul id="nav-list">
+<nav class='navbar navbar-default'>
+  <div class='container-fluid'>
+    <div class='navbar-header'>
+      <% if logged_in? %>
+        <h4> Hi, <%= current_user.name %> </h4>
+      <% end %>
+    </div>
+    <div class='navbar-collapse collapse'>
+      <ul class='nav navbar-nav navbar-right'>
+        <div>
         <% if logged_in? %>
-          <li><%= link_to "Home", posts_path %></li>
-          <li><%= link_to "Assets", stocks_path %></li>
-          <li class="dropdown">
-            <li><%= link_to "Profile", current_user %></li>
-            <li>
-              <%= link_to "Log out", logout_path, method: :delete %>
-            </li>
-          </li>
+          <li role='presentation'><%= link_to "Log out", logout_path, method: :delete, role: 'button' %></li>
         <% else %>
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Log in", login_path %></li>
+          <li role='presentation'><%= link_to "Log in", login_path, role: 'button' %></li>
         <% end %>
+        </div>
       </ul>
-    </nav>
+    </div>
   </div>
-</header>
+</nav>

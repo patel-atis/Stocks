@@ -17,9 +17,16 @@
 
 $bg-color1: #e9ebee;
 
-body {
-  background-color: $bg-color1;
-  #page {
-    margin-top: 40px;
+.vsc-initialized {
+  margin: 0;
+}
+
+
+.content {
+  padding: 30px 15px 30px 15px;
+  .container-fluid{
+    .card {
+      padding: 15px;
+    }
   }
 }

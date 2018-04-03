@@ -4,14 +4,23 @@
     <title>Stocks</title>
     <%= csrf_meta_tags %>
     <%= javascript_pack_tag 'hello_react' %>
-    <%= stylesheet_link_tag    'application', 'nav', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', 'sidebar', 'bootstrap', 'nav', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= render 'layouts/nav' %>
-    <div id='page'>
-      <%= yield %>
+  <body class='vsc-initialized'>
+    <div id='page' class='wrapper'>
+      <%= render 'layouts/sidebar' %>
+      <div class='main-panel'>
+        <%= render 'layouts/nav' %>
+        <div class='content'>
+          <div class='container-fluid'>
+            <div class='card'>
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
