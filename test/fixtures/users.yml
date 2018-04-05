@@ -3,11 +3,11 @@
 one:
   name: "atish patel"
   email: "atish.patel95@yahoo.com"
-  pass_hash: "password"
+  password_digest: "password"
   rem_hash: "password"
 
 two:
   name: MyString
   email: MyString
-  pass_hash: MyString
+  password_digest: MyString
   rem_hash: MyString

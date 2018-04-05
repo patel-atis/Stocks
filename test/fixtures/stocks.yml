@@ -5,7 +5,7 @@ one:
   ticker: MyString
   price: 9.99
   dividend: 9.99
-  type: true
+  preferred: true
   rating: MyString
 
 two:
@@ -13,5 +13,5 @@ two:
   ticker: MyString
   price: 9.99
   dividend: 9.99
-  type: false
+  preferred: false
   rating: MyString

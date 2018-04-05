@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180327201102) do
+ActiveRecord::Schema.define(version: 20180404002712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,13 +32,13 @@ ActiveRecord::Schema.define(version: 20180327201102) do
   end
 
   create_table "relationships", force: :cascade do |t|
-    t.integer "follower"
-    t.integer "followed"
+    t.integer "follower_id"
+    t.integer "followed_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["followed"], name: "index_relationships_on_followed"
-    t.index ["follower", "followed"], name: "index_relationships_on_follower_and_followed", unique: true
-    t.index ["follower"], name: "index_relationships_on_follower"
+    t.index ["followed_id"], name: "index_relationships_on_followed_id"
+    t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
+    t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
 
   create_table "stocks", force: :cascade do |t|
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20180327201102) do
     t.string "ticker"
     t.decimal "price"
     t.decimal "dividend"
-    t.boolean "type"
+    t.boolean "preferred"
     t.string "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
