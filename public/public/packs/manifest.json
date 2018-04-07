@@ -1,0 +1,8 @@
+{
+  "application.js": "/public/packs/application-058afa8836861bddc718.js",
+  "application.js.map": "/public/packs/application-058afa8836861bddc718.js.map",
+  "hello-world-bundle.js": "/public/packs/hello-world-bundle-7ca6c98fce8ed58386a7.js",
+  "hello-world-bundle.js.map": "/public/packs/hello-world-bundle-7ca6c98fce8ed58386a7.js.map",
+  "server_rendering.js": "/public/packs/server_rendering-3ca0009b8e0e386dd988.js",
+  "server_rendering.js.map": "/public/packs/server_rendering-3ca0009b8e0e386dd988.js.map"
+}
