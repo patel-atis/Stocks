@@ -12,4 +12,4 @@ Stocks is currently seeded with the 100 most active stocks (name and ticker) acc
 
 Front end now includes React components
 
-Pulling stock data from alphavantage api
+Pulling stock data from IEX api
