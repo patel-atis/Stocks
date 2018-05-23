@@ -5,13 +5,16 @@
         <h4> Hi, <%= current_user.name %> </h4>
       <% end %>
     </div>
-    <div class='navbar-collapse collapse'>
-      <ul class='nav navbar-nav navbar-right'>
+    <div class='navbar-links'>
+      <ul class='nav navbar-nav'>
         <div>
+          <li><%= link_to 'Home', root_path, role: 'button' %></li>
+          <li><%= link_to 'Stocks', stocks_path, role: 'button' %></li>
         <% if logged_in? %>
-          <li role='presentation'><%= link_to "Log out", logout_path, method: :delete, role: 'button' %></li>
+          <li><%= link_to 'Profile', current_user, role: 'button' %></li>
+          <li role='presentation'><%= link_to 'Logout', logout_path, method: :delete, role: 'button' %></li>
         <% else %>
-          <li role='presentation'><%= link_to "Log in", login_path, role: 'button' %></li>
+          <li role='presentation'><%= link_to 'Login', login_path, role: 'button' %></li>
         <% end %>
         </div>
       </ul>

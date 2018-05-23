@@ -3,3 +3,15 @@
     margin-top: 0;
   }
 }
+
+.navbar-links {
+  border: 1px solid blue;
+  ul {
+    margin-right: 10px;
+    float: right;
+    list-style: none;
+    li {
+      display: inline;
+    }
+  }
+}
