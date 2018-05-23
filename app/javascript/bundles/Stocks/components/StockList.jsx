@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Stock from './Stock';
+import StockRow from './StockRow';
 
 export default class StockList extends React.Component {
 
