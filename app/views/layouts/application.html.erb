@@ -3,14 +3,13 @@
   <head>
     <title>Stocks</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', 'sidebar', 'bootstrap', 'nav', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', 'bootstrap', 'nav', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'hello-world-bundle' %>
   </head>
 
   <body class='vsc-initialized'>
     <div id='page' class='wrapper'>
-      <%= render 'layouts/sidebar' %>
       <div class='main-panel'>
         <%= render 'layouts/nav' %>
         <div class='content'>
