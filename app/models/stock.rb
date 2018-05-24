@@ -1,3 +1,3 @@
 class Stock < ApplicationRecord
-  has_many :users, through: :ledger
+  has_many :ledgers
 end

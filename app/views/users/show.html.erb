@@ -1,24 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div id="user-show">
+  <p id="notice"><%= notice %></p>
+  <div id="sidebar" class="col-md-4">
+    <div id="bio">
+      <h3> Bio </h3>
+      <p>
+        <strong>Name:</strong>
+        <%= @user.name %>
+      </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Pass hash:</strong>
-  <%= @user.password %>
-</p>
-
-<p>
-  <strong>Rem hash:</strong>
-  <%= @user.password_confirmation %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+      <p>
+        <strong>Email:</strong>
+        <%= @user.email %>
+      </p>
+    </div>
+    <div id="portfolio">
+      <h3> Portfolio </h3>
+      <ul>
+        <% @userstocks.each do |s| %>
+          <li><span class="company"><%= s.stock_id %></span></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div id="userposts" class="col-md-8">
+    <h3> My Posts </h3>
+    <ul>
+      <% @userposts.each do |p| %>
+        <li><span class="company"><%= p.stock_id %></span>|
+           <%= p.content %> </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

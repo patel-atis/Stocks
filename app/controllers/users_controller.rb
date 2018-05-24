@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @userposts = @user.posts
+    @userstocks = @user.ledgers
   end
 
   # GET /users/new

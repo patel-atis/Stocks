@@ -4,7 +4,7 @@ class User < ApplicationRecord
   attr_accessor :remember_token
 
   has_many :posts
-  has_many :stocks, through: :ledger
+  has_many :ledgers
   has_many :followeds, through: :relationships
 
   validates :name, presence: true, length: {maximum: 50}

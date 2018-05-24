@@ -25,5 +25,7 @@ end
 
 #for each company create a value in the stocks database
 companies.each do |comp|
-  Stock.create(company: comp[0], ticker: comp[1], price: 0, dividend: 0, type: false, rating: "A")
+  Stock.create(company: comp[0], ticker: comp[1], price: 0, dividend: 0, preferred: false, rating: "A")
 end
+
+Ledger.create(user_id: 5, stock_id: 1, holding?: true);
