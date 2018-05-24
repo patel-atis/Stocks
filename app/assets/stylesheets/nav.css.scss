@@ -5,13 +5,13 @@
 }
 
 .navbar-links {
-  border: 1px solid blue;
+  border: 1px solid green;
   ul {
-    margin-right: 10px;
-    float: right;
+    display: inline;
     list-style: none;
     li {
       display: inline;
+      padding: 5px;
     }
   }
 }

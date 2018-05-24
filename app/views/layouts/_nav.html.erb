@@ -1,22 +1,18 @@
 <nav class='navbar navbar-default'>
   <div class='container-fluid'>
-    <div class='navbar-header'>
-      <% if logged_in? %>
-        <h4> Hi, <%= current_user.name %> </h4>
-      <% end %>
-    </div>
     <div class='navbar-links'>
-      <ul class='nav navbar-nav'>
-        <div>
-          <li><%= link_to 'Home', root_path, role: 'button' %></li>
-          <li><%= link_to 'Stocks', stocks_path, role: 'button' %></li>
+      <ul>
         <% if logged_in? %>
-          <li><%= link_to 'Profile', current_user, role: 'button' %></li>
-          <li role='presentation'><%= link_to 'Logout', logout_path, method: :delete, role: 'button' %></li>
+          <li class="left"> Hi, <%= current_user.name %> <li>
+          <li class="right"><%= link_to 'Home', root_path, role: 'button' %></li>
+          <li class="right"><%= link_to 'Stocks', stocks_path, role: 'button' %></li>
+          <li class="right"><%= link_to 'Profile', current_user, role: 'button' %></li>
+          <li class="right" role='presentation'><%= link_to 'Logout', logout_path, method: :delete, role: 'button' %></li>
         <% else %>
-          <li role='presentation'><%= link_to 'Login', login_path, role: 'button' %></li>
+          <li class="left"><%= link_to 'Home', root_path, role: 'button' %></li>
+          <li class="left"><%= link_to 'Stocks', stocks_path, role: 'button' %></li>
+          <li class="right" role='presentation'><%= link_to 'Login', login_path, role: 'button' %></li>
         <% end %>
-        </div>
       </ul>
     </div>
   </div>
