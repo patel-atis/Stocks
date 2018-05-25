@@ -4,7 +4,7 @@
       <ul>
         <% if logged_in? %>
           <li class="left"> Hi, <%= current_user.name %> <li>
-          <li class="right"><%= link_to 'Home', root_path, role: 'button' %></li>
+          <li class="right"><%= link_to 'Home', posts_path, role: 'button' %></li>
           <li class="right"><%= link_to 'Stocks', stocks_path, role: 'button' %></li>
           <li class="right"><%= link_to 'Profile', current_user, role: 'button' %></li>
           <li class="right" role='presentation'><%= link_to 'Logout', logout_path, method: :delete, role: 'button' %></li>
