@@ -1,3 +1,25 @@
 // Place all the styles related to the stocks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#stock-list {
+  header {
+    margin-bottom: 25px;
+  }
+  section {
+    table {
+      thead {
+        font-size: 14px;
+        background-color: grey;
+      }
+      tbody {
+        font-size: 10px;
+        tr {
+          height: 30px;
+          td {
+            border-left: 1px solid black;
+          }
+        }
+      }
+    }
+  }
+}

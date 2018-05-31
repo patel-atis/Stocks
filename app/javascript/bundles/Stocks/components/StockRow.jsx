@@ -57,10 +57,10 @@ export default class StockRow extends React.Component {
         <tr>
           <td>{this.props.company}</td>
           <td>{this.props.ticker}</td>
-          <td>${this.state.price}</td>
+          <td>{this.state.quantity}</td>
           <td>${this.state.high}</td>
           <td>${this.state.low}</td>
-          <td>{this.state.quantity}</td>
+          <td>${this.state.price}</td>
         </tr>
       )
     }

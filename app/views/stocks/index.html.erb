@@ -1,11 +1,10 @@
 <p id="notice"><%= notice %></p>
+<div id="stock-list">
+  <header>
+    <h1>Companies</h1>
+  </header>
 
-
-<h1>Public Companies</h1>
-
-
-<%= react_component("StockList", props: {stocks: @stocks}, prerender: true) %>
-
-<br>
-
-<%= link_to 'New Stock', new_stock_path %>
+  <section>
+    <%= react_component("StockList", props: {stocks: @stocks}, prerender: true) %>
+  </section>
+</div>

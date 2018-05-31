@@ -24,10 +24,10 @@ export default class StockList extends React.Component {
           <tr>
             <th>Company</th>
             <th>Ticker</th>
-            <th>Price</th>
+            <th>LTQ</th>
             <th>High</th>
             <th>Low</th>
-            <th>Quantity</th>
+            <th>Price</th>
           </tr>
         </thead>
         <tbody>
