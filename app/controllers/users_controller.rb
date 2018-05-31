@@ -63,6 +63,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def following
+    @title = "Following"
+    @userlist = @user.followers
+    render 'show_follow'
+  end
+
+  def followers
+    @title = "Followers"
+    @userlist = @user.following
+    render 'show_follow'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

@@ -1,0 +1,19 @@
+<% provide(:title, @title)%>
+
+<h4><%= @title %></h4>
+
+<table id="connections">
+  <thead>
+    <strong><th> Name </th></strong>
+    <strong><th> Email </th></strong>
+  </thead>
+
+  <% @userlist.each do |connect| %>
+  <tbody>
+    <tr class="user-list">
+      <td><a href="<%= user_path(connect.id)%>"><%= connect.name %></a></td>
+      <td><%= connect.email %></td>
+    </tr>
+  </tbody>
+  <%end%>
+</table>

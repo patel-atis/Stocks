@@ -5,7 +5,10 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :ledgers
-  has_many :followeds, through: :relationships
+  has_many :active_relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
+  has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
 
   validates :name, presence: true, length: {maximum: 50}
   VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
@@ -13,6 +16,21 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: {minimum: 6}
   validates :password_confirmation, presence: true
+
+  #check if this user is following the person whose page this is
+  def following?(user)
+    followers.include?(user)
+  end
+
+  #follow another User
+  def follow(user)
+    followers << user
+  end
+
+  #unfollow current User
+  def unfollow(user)
+    followers.delete(user)
+  end
 
   #return digest of given string
   def User.digest(string)
