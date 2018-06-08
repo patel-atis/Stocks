@@ -4,7 +4,7 @@ This is a stock trading social media application. Users can follow one another a
 
 ------
 
-##Requirements
+## Requirements
 
   Rails 5.1.5,  
 
@@ -12,7 +12,7 @@ This is a stock trading social media application. Users can follow one another a
 
   PostgreSQL 10.1
 
-##Get up and Running
+## Get up and Running
 
   Fork and then clone this repository from your terminal like this:
 
