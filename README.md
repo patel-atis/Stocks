@@ -4,7 +4,44 @@ This is a stock trading social media application. Users can follow one another a
 
 ------
 
-### Tables:
+##Requirements
+
+  Rails 5.1.5,  
+
+  Ruby 2.4.1,
+
+  PostgreSQL 10.1
+
+##Get up and Running
+
+  Fork and then clone this repository from your terminal like this:
+
+  `
+    git clone https://github.com/your-name/Stocks.git
+  `
+
+  Then run the following commands to install dependencies and create local database
+
+  `
+    bundle install
+  `
+
+  and
+
+  `
+    rake db:migrate
+  `
+
+  hopefully now you can run:
+
+  `
+    rails s
+  `
+
+  and have a running version of this application running locally.
+
+
+## Resources:
 
 ##### Users
   Represents users who create an account on this site
