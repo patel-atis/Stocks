@@ -1,34 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Company:</strong>
-  <%= @stock.company %>
-</p>
+<div class="show-stock">
 
-<p>
-  <strong>Ticker:</strong>
-  <%= @stock.ticker %>
-</p>
+  <aside class="stock-info">
+    <header class="title">
+      <h1>
+        <%= @stock.company %>
+      </h1>
+    </header>
+    <p>
+      <%= @stock.ticker %>
+    </p>
+  </aside>
 
-<p>
-  <strong>Price:</strong>
-  <%= @stock.price %>
-</p>
+  <aside class="main-section">
+    <header class="price-history">
+      <header class="price-info">
+        <h4> Price History </h4>
+        <div class="current-price"><%= @stock.price %></div>
+      </header>
+      <div class="price-over-time"></div>
+    </header>
 
-<p>
-  <strong>Dividend:</strong>
-  <%= @stock.dividend %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @stock.preferred %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @stock.rating %>
-</p>
-
-<%= link_to 'Edit', edit_stock_path(@stock) %> |
+    <article class="stocks-posts">
+      <ul>
+        <% @stockpost.each do |post| %>
+        <li>
+          <span class="user"><h4><%= User.find(post.user_id).name %></h4></span>
+           <%= post.content %>
+         </li>
+        <% end %>
+      </ul>
+    </article>
+  </aside>
+</div>
 <%= link_to 'Back', stocks_path %>

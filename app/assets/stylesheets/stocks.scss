@@ -23,3 +23,45 @@
     }
   }
 }
+
+.show-stock {
+  display: flex;
+
+  .stock-info {
+    margin: auto;
+    order: 1;
+    flex: 1;
+  }
+  .main-section {
+    margin: auto;
+    order: 2;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    .price-history {
+      margin: auto;
+      order: 1;
+      .price-info {
+        display: flex;
+        h4 {
+          margin: auto;
+          order: 1;
+          flex: 2;
+        }
+        .current-price {
+          margin: auto;
+          order: 2;
+          flex: 1;
+        }
+      }
+      .price-over-time {
+        border: 1px dashed black;
+        height: 200px;
+      }
+    }
+    .stocks-posts {
+      margin: auto;
+      order: 2;
+    }
+  }
+}
