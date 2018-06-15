@@ -4,9 +4,15 @@
   <h1>Posts</h1>
   <ul>
     <% @posts.each do |post| %>
-      <td><%= post.stock_id %></td>
-      <td><%= post.user_id %></td>
-      <td><%= post.content %></td>
+    <li>
+      <aside>
+        <h3><%= Stock.find(post.stock_id).company %></h3>
+        <h4><%= User.find(post.user_id).name %></h4>
+      </aside>
+      <article>
+        <p><%= post.content %></p>
+      </article>
+    </li>
     <% end %>
   </ul>
 </div>
