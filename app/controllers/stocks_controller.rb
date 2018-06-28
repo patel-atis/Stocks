@@ -10,6 +10,7 @@ class StocksController < ApplicationController
   # GET /stocks/1
   # GET /stocks/1.json
   def show
+    @stockpost = @stock.posts
   end
 
   # GET /stocks/new
