@@ -12,14 +12,16 @@ require 'open-uri'
 companies = []
 
 #get companies list
-doc = Nokogiri::HTML(open('http://www.wsj.com/mdc/public/page/2_3021-activnyse-actives.html'))
+doc = Nokogiri::HTML(open('https://money.cnn.com/data/dow30/'))
 
 #iterate through the companies and split stock name and ticker
 #append both values (as an array) into the companies array
-doc.css('td a.linkb').each do |f|
-  full_name = f.text
-  name, ticker = full_name.split(' (')
-  ret_arr = [name, ticker.chomp().chop()]
+doc.css('table tr td.wsod_firstCol').each do |f|
+  full_name = f.class
+  ticker = f.first_element_child.text
+  name = f.last_element_child.text
+  #ticker, name = full_name.split(' ', 2)
+  ret_arr = [name, ticker]
   companies << ret_arr
 end
 
@@ -27,5 +29,3 @@ end
 companies.each do |comp|
   Stock.create(company: comp[0], ticker: comp[1], price: 0, dividend: 0, preferred: false, rating: "A")
 end
-
-Ledger.create(user_id: 5, stock_id: 1, holding?: true);
