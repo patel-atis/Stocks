@@ -19,15 +19,18 @@ $bg-color1: #e9ebee;
 
 .vsc-initialized {
   margin: 0;
-}
-
-
-.content {
-  padding: 30px 15px 30px 15px;
-  text-align: center;
-  .container-fluid{
-    .card {
-      padding: 15px;
+  #page {
+    .main-panel {
+      width: 100%;
+      .content {
+        padding: 30px 15px 30px 15px;
+        text-align: center;
+        .container-fluid{
+          .card {
+            padding: 15px;
+          }
+        }
+      }
     }
   }
 }

@@ -49,16 +49,10 @@
       font-size: 8px;
       margin: 10px 0px 10px 0px;
       padding: 5px;
+      border: 1px solid black;
+      border-radius: 3px;
       .company {
-        display: flex;
-        border-right: 1px solid black;
-        flex-direction: column;
-        float: left;
-        height: 100%;
-        width: 30%;
-        margin-right: 10px;
         h4 {
-          margin: auto;
         }
       }
     }
