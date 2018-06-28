@@ -6,8 +6,10 @@
     <% @posts.each do |post| %>
     <li>
       <aside>
-        <h3><%= Stock.find(post.stock_id).company %></h3>
-        <h4><%= User.find(post.user_id).name %></h4>
+        <%stock = Stock.find(post.stock_id)%>
+        <%user = User.find(post.user_id)%>
+        <h4><%= link_to(stock.company, stock) %></h4>
+        <h5><%= link_to(user.name, user) %></h5>
       </aside>
       <article>
         <p><%= post.content %></p>

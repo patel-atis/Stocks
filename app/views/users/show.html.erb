@@ -48,8 +48,13 @@
     <%= link_to 'New Post', new_post_path %>
     <ul>
       <% @userposts.each do |p| %>
-        <li><span class="company"><h4><%= Stock.find(p.stock_id).company %></h4></span>
-           <%= p.content %> </li>
+        <li>
+          <span class="company">
+            <%stock = Stock.find(p.stock_id)%>
+            <h5><%= link_to(stock.company, stock) %></h5>
+          </span>
+           <%= p.content %>
+         </li>
       <% end %>
     </ul>
   </div>

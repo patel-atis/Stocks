@@ -26,7 +26,10 @@
       <ul>
         <% @stockpost.each do |post| %>
         <li>
-          <span class="user"><h4><%= User.find(post.user_id).name %></h4></span>
+          <span class="user">
+            <% user = User.find(post.user_id)%>
+            <h5><%= link_to(user.name, user) %></h5>
+          </span>
            <%= post.content %>
          </li>
         <% end %>
