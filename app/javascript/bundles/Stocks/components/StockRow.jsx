@@ -55,7 +55,7 @@ export default class StockRow extends React.Component {
     } else {
       return(
         <tr>
-          <td>{this.props.company}</td>
+          <a href={"stocks/" + this.props.id}><td>{this.props.company}</td></a>
           <td>{this.props.ticker}</td>
           <td>{this.state.quantity}</td>
           <td>${this.state.high}</td>

@@ -14,7 +14,7 @@ export default class StockList extends React.Component {
 
     this.props.stocks.forEach((item) => {
 
-      rows.push(<StockRow key={item.id} company={item.company} ticker={item.ticker} price={item.price} dividend={item.dividend} type={item.type} rating={item.rating}/>)
+      rows.push(<StockRow id={item.id} company={item.company} ticker={item.ticker} price={item.price} dividend={item.dividend} type={item.type} rating={item.rating}/>)
 
     });
 
