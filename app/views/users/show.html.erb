@@ -38,7 +38,8 @@
       <h3> Portfolio </h3>
       <ul>
         <% @userstocks.each do |s| %>
-          <li><span class="company"><%= Stock.find_by({id: s.stock_id}).company %></span></li>
+        <% stock = Stock.find_by({id: s.stock_id}) %>
+          <li><span class="company"><%= link_to(stock.company, stock) %></span></li>
         <% end %>
       </ul>
     </div>
