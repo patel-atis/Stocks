@@ -1,17 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <div class="show-stock">
-
   <aside class="stock-info">
     <header class="title">
-      <h1>
+      <h3>
         <%= @stock.company %>
-      </h1>
+      </h3>
+      <p>
+        <%= @stock.ticker %>
+      </p>
+      <div id="follow_button">
+      <% if current_user.holding?(@stock) %>
+        <%= render 'divest' %>
+      <% else %>
+        <%= render 'invest' %>
+      <% end %>
+      </div>
     </header>
-    <p>
-      <%= @stock.ticker %>
-    </p>
   </aside>
+
 
   <aside class="main-section">
     <header class="price-history">
