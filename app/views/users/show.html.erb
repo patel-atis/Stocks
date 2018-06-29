@@ -38,14 +38,16 @@
       <h3> Portfolio </h3>
       <ul>
         <% @userstocks.each do |s| %>
-          <li><span class="company"><%= Stock.find(s.stock_id).ticker %></span></li>
+          <li><span class="company"><%= Stock.find_by({id: s.stock_id}).company %></span></li>
         <% end %>
       </ul>
     </div>
   </div>
   <div id="userposts" class="col-md-8">
     <h3> My Posts </h3>
-    <%= link_to 'New Post', new_post_path %>
+    <% if @user.id == current_user.id%>
+      <%= link_to 'New Post', new_post_path %>
+    <% end %>
     <ul>
       <% @userposts.each do |p| %>
         <li>
